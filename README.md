@@ -16,3 +16,14 @@ Communicates with User Service via REST (to validate user).
 
 Docker Compose to run both services + databases. 
 
+
+cd user-service -->   mvn clean package -DskipTests
+
+cd ../product-service --> mvn clean package -DskipTests
+
+cd ../order-service --> mvn clean package -DskipTests
+
+To run in background:
+
+docker-compose down -d
+
