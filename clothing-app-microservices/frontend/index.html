@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Clothing Store - Microservices Demo</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Clothing Store (Microservices)</h1>
+
+    <section>
+      <h2>Add User</h2>
+      <input id="user-name" placeholder="Name" />
+      <input id="user-email" placeholder="Email" />
+      <button onclick="addUser()">Add User</button>
+      <pre id="users-output"></pre>
+    </section>
+
+    <section>
+      <h2>Add Product</h2>
+      <input id="product-name" placeholder="Product Name" />
+      <input id="product-price" placeholder="Price" type="number" />
+      <button onclick="addProduct()">Add Product</button>
+      <pre id="products-output"></pre>
+    </section>
+
+    <section>
+      <h2>Create Order</h2>
+      <input id="order-userId" placeholder="User ID" type="number" />
+      <input id="order-productId" placeholder="Product ID" type="number" />
+      <button onclick="createOrder()">Create Order</button>
+      <pre id="orders-output"></pre>
+    </section>
+  </div>
+  <script src="/script.js"></script>
+</body>
+</html>

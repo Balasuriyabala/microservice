@@ -1,0 +1,33 @@
+version: "3.8"
+
+services:
+  user-service:
+    build: ./user-service
+    container_name: user-service
+    ports:
+      - "5000:5000"
+
+  product-service:
+    build: ./product-service
+    container_name: product-service
+    ports:
+      - "6000:6000"
+
+  order-service:
+    build: ./order-service
+    container_name: order-service
+    ports:
+      - "7000:7000"
+    depends_on:
+      - user-service
+      - product-service
+
+  frontend-gateway:
+    build: ./frontend
+    container_name: frontend-gateway
+    ports:
+      - "8080:80"
+    depends_on:
+      - user-service
+      - product-service
+      - order-service
