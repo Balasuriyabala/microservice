@@ -16,20 +16,3 @@ Communicates with User Service via REST (to validate user).
 
 Docker Compose to run both services + databases. 
 
-
-microservices-springboot/
-
-│── user-service/
-|
-│   ├── src/main/java/com/example/user/...
-|
-│   ├── pom.xml
-|
-│── order-service/
-|
-│   ├── src/main/java/com/example/order/...
-|
-│   ├── pom.xml
-|
-│── docker-compose.yml
-
