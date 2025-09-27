@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+    
+    environment {
+        APP_PATH = "/var/lib/jenkins/workspace/Micro-serivces/clothing-app-microservices"
+        IMAGE_TAG = "latest"  // you can also use ${BUILD_NUMBER}
+    }
+    stages {
+        stage('Git-Checkout') {
+            steps {
+                git branch: 'development', url: 'https://github.com/Balasuriyabala/microservice.git'
+            }
+        }
+
+        stage('Deploy with Docker Compose') {
+            steps {
+                dir("${APP_PATH}"){
+                    sh """
+                      echo "Updating services..."
+                      docker-compose up -d
+                    """
+                }
+            }
+        }
+    }
+}
