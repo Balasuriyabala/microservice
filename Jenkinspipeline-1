@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     environment {
-        APP_PATH = "/var/lib/jenkins/workspace/Micro-serivces/clothing-app-microservices"
+        APP_PATH = "/var/lib/jenkins/workspace/micro-java/clothing-app-microservices"
         IMAGE_TAG = "latest"  // you can also use ${BUILD_NUMBER}
     }
     stages {
