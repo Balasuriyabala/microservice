@@ -26,7 +26,7 @@ services:
     build: ./frontend
     container_name: frontend-gateway
     ports:
-      - "8080:80"
+      - "8001:80"
     depends_on:
       - user-service
       - product-service
